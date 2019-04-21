@@ -1,0 +1,18 @@
+# 配置数据源
+spring:
+   datasource:
+      # jdbc:mysql://127.0.0.1:3306/wzt 表示找到本机的MySQL服务器中名为kemao_3的数据库
+      # useSSL=false 表示不使用SSL加密
+      # serverTimezone=CST 指定服务器的时区，CST（China Standard Time）
+      url: jdbc:mysql://127.0.0.1:3306/wzt?useSSL=false&serverTimezone=CST&allowPublicKeyRetrieval=true
+      username: wzt
+      password: Qq123698745
+   redis:
+      # 大家要把IP改为远程服务器的IP
+      host: 127.0.0.1
+      port: 6379
+      # Redis里面没有数据库名，只有数据库的序号，默认是有16个数据库，分别是从0~16。
+      # 多人共享一个服务器的时候，每个人协商好各自使用哪个数据库。
+      database: 9
+
+server.port: 8090
